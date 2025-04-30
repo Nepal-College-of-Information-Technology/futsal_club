@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balkumari Futsal Club</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f3e8ff; /* Light purple background */
+            font-family: 'Arial', sans-serif;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1601599841870-8f26e85f5eb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #d8b4fe; /* Light purple */
+        }
+        .cta-button {
+            background-color: #d8b4fe;
+            color: #1f2937;
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #c084fc;
+        }
+        .section-bg {
+            background-color: #ede9fe; /* Slightly darker light purple */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-transparent fixed w-full z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <span class="logo">Balkumari Futsal Club</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="#home" class="text-white hover:text-gray-300">Home</a>
+                    <a href="#about" class="text-white hover:text-gray-300">About</a>
+                    <a href="#schedule" class="text-white hover:text-gray-300">Schedule</a>
+                    <a href="#contact" class="text-white hover:text-gray-300">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg flex items-center justify-center text-center text-white">
+        <div>
+            <h1 class="text-5xl font-bold mb-4">Welcome to Balkumari Futsal Club</h1>
+            <p class="text-xl mb-6">Lalitpur's Premier Futsal Destination</p>
+            <button class="cta-button">Join Us Now!</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 section-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
+            <p class="text-lg text-gray-600 mb-4">
+                Located in the heart of Balkumari, Lalitpur, our futsal club offers top-notch facilities for enthusiasts and athletes alike. 
+                Join our community to experience the thrill of futsal in a vibrant and supportive environment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Schedule</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">Monday - Friday</h3>
+                    <p class="text-gray-600">6:00 PM - 9:00 PM</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">Saturday</h3>
+                    <p class="text-gray-600">10:00 AM - 6:00 PM</p>
+                </div>
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-gray-800">Sunday</h3>
+                    <p class="text-gray-600">Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 section-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Get in Touch</h2>
+            <p class="text-lg text-gray-600 mb-4">Have questions? Reach out to us!</p>
+            <p class="text-lg text-gray-600">📍 Balkumari, Lalitpur, Nepal</p>
+            <p class="text-lg text-gray-600">📞 +977 984-123-4567</p>
+            <p class="text-lg text-gray-600">📧 info@balkumarifutsal.com</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-6 bg-gray-800 text-white text-center">
+        <p>&copy; 2025 Balkumari Futsal Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // CTA Button Animation
+        const ctaButton = document.querySelector('.cta-button');
+        ctaButton.addEventListener('click', () => {
+            alert('Welcome to Balkumari Futsal Club! Sign up to join our community.');
+        });
+    </script>
+</body>
+</html>
